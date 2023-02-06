@@ -19,8 +19,7 @@ export class LayoutComponent implements OnInit {
     this.toastrService.success('Thanks :)', 'Done');
   }
 
-
-
-
-
+  public triggerHtmlToastr(): void {
+    this.toastrService.success('<strong>Thanks!</strong> :)', 'Done');
+  }
 }
