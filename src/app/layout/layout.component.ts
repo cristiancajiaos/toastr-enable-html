@@ -1,3 +1,4 @@
+import { ToastrService } from 'ngx-toastr';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private toastrService: ToastrService
+  ) { }
 
   ngOnInit() {
   }
+
+  public triggerCommonToastr(): void {
+    this.toastrService.success('Thanks :)', 'Done');
+  }
+
+
+
+
 
 }
